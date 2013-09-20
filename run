@@ -1,0 +1,38 @@
+#!/bin/sh
+
+# first meteor app running on port 9000
+#   child process - 9001
+#   meteor mongo  - 9002
+
+# second - 9003
+# third  - 9005
+# fourth - 9007
+
+
+#DISABLE_WEBSOCKETS=true meteor run -p 9000
+
+runNumber=$1
+mongoURL="MONGO_URL=mongodb://localhost:9002/meteor"
+
+case $runNumber in
+  2)
+    port=9003
+    ;;
+  3)
+    port=9005
+    ;;
+  4) 
+    port=9007
+    ;;
+  *) 
+    port=9000
+    prefix=""
+    ;;
+esac
+
+if [ $port -ne 9000 ] 
+  then
+    export "$mongoURL"
+fi
+  
+meteor run -p $port
