@@ -47,14 +47,23 @@ Open http://localhost:3000/ in some browsers.
 
 * Include health checks as found [here](http://haproxy.1wt.eu/download/1.2/doc/architecture.txt)
 * Use [Smart Collections](http://meteorhacks.com/lets-scale-meteor.html) to avoid update delays
+* Support auto-scaling, ex: [haproxy-autoscale](https://github.com/markcaudill/haproxy-autoscale)
 
 Pull requests welcome.
 
 
+## Further Reading
+
+* [AWS Route53 health checks](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover.html)
+* [AWS HAProxy Layer via OpsCode](http://docs.aws.amazon.com/opsworks/latest/userguide/workinglayers-load.html)
+* [HAProxy architecture examples](http://haproxy.1wt.eu/download/1.2/doc/architecture.txt)
+* [Load Balancing your Meteor App](http://meteorhacks.com/load-balancing-your-meteor-app.html)
+* [SockJS HAProxy config](https://github.com/sockjs/sockjs-node/blob/master/examples/haproxy.cfg)
+
+
 ## Configuring logging (syslog)
 
-HAProxy logs to syslog so that there is no downtime required by things like
-logrotate.  On OSX, syslog is not set up to listen to network log requests so a bit of configuration is needed before you will be able to see HAProxy log messages.
+HAProxy logs to syslog so that there is no downtime required by utils such as `logrotate`.  On OSX, syslog is not set up to listen to network log requests so a bit of configuration is needed before you will be able to see HAProxy log messages.
 
 To configure syslog on OSX:
 
