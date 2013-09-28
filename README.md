@@ -4,7 +4,25 @@ meteor-load-balancing
 Example application demonstrating load balancing a meteor app using HAProxy
 
 
-Open 5 terminal windows:
+## Setup
+
+1. Install HAProxy
+```bash
+# on OSX with homebrew
+brew install haproxy
+```
+
+2. Download this example
+```bash
+git clone https://github.com/alanning/meteor-load-balancing
+```
+
+
+## Run
+
+1. Open 5 terminal windows
+
+2. From `meteor-load-balancing` directory:
 
 ```bash
 # term1
@@ -26,7 +44,7 @@ haproxy -f haproxy.cfg
 Open http://localhost:3000/ in some browsers.
 
 
-## Configuring syslog
+## Configuring logging (syslog)
 
 HAProxy logs to syslog so that there is no downtime required by things like
 logrotate.  On OSX, syslog is not set up to listen to network log requests so a bit of configuration is needed before you will be able to see HAProxy log messages.
