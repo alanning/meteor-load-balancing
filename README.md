@@ -43,6 +43,12 @@ haproxy -f haproxy.cfg
 
 Open http://localhost:3000/ in some browsers.
 
+## Future work
+
+* Include health checks as found [here](http://haproxy.1wt.eu/download/1.2/doc/architecture.txt)
+
+Pull requests welcome.
+
 
 ## Configuring logging (syslog)
 
