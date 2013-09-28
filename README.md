@@ -46,6 +46,7 @@ Open http://localhost:3000/ in some browsers.
 ## Future work
 
 * Include health checks as found [here](http://haproxy.1wt.eu/download/1.2/doc/architecture.txt)
+* Use [Smart Collections](http://meteorhacks.com/lets-scale-meteor.html) to avoid update delays
 
 Pull requests welcome.
 
